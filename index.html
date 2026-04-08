@@ -1,100 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pedro Roque | Desenvolvedor</title>
 
 <style>
 
-/* RESET */
-
-*{
+* {
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial;
 }
 
-/* BODY */
-
-body{
+body {
 background:#0f172a;
 color:white;
 }
 
-/* HEADER */
-
-header{
-position:fixed;
-width:100%;
-top:0;
-background:#020617;
-padding:20px 50px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-z-index:1000;
-}
-
-.logo{
-font-size:24px;
-font-weight:bold;
-color:#38bdf8;
-}
-
-nav ul{
-list-style:none;
-display:flex;
-gap:30px;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-transition:.3s;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* MENU MOBILE */
-
-.menu-btn{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* SECTIONS */
-
-section{
-padding:120px 50px;
+section {
+padding:80px 20px;
 min-height:100vh;
+max-width:900px;
+margin:auto;
 }
 
-/* HOME */
-
-.home{
+.home {
 display:flex;
 flex-direction:column;
 justify-content:center;
+align-items:flex-start;
 }
 
-.home h1{
+.home h1 {
 font-size:48px;
 }
 
-.home span{
+.home span {
 color:#38bdf8;
 }
 
-/* BUTTON */
-
-.btn{
+.btn {
 margin-top:20px;
 padding:12px 24px;
 border:none;
@@ -105,76 +52,40 @@ border-radius:8px;
 transition:.3s;
 }
 
-.btn:hover{
+.btn:hover {
 background:#0284c7;
 }
 
-/* ABOUT / PROJECTS / CONTACT */
-
-.about,
-.projects,
-.contact{
-max-width:900px;
-margin:auto;
-}
-
-/* PROJECT GRID */
-
-.projects-grid{
+.projects-grid {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 margin-top:40px;
 }
 
-/* CARD */
-
 .project-card{
+display:block;
+text-decoration:none;
+color:white;
 background:#020617;
 padding:20px;
 border-radius:10px;
 transition:.3s;
 }
 
-.project-card:hover{
+.project-card:hover {
 transform:translateY(-5px);
 }
 
-/* FOOTER */
-
-footer{
+footer {
 text-align:center;
 padding:20px;
 background:#020617;
 }
 
-/* RESPONSIVO */
-
 @media(max-width:768px){
 
-nav ul{
-position:absolute;
-top:80px;
-right:0;
-background:#020617;
-flex-direction:column;
-width:200px;
-display:none;
-}
-
-nav ul.active{
-display:flex;
-}
-
-.menu-btn{
-display:block;
-}
-
-section{
-padding:120px 20px;
-}
-
-.home h1{
+.home h1 {
 font-size:32px;
 }
 
@@ -185,42 +96,6 @@ font-size:32px;
 
 <body>
 
-<header>
-
-<div class="logo">Pedro.dev</div>
-
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
-
-<nav>
-
-<ul id="menu">
-
-<li>
-<a href="#home">Home</a>
-</li>
-
-<li>
-<a href="#about">Sobre</a>
-</li>
-
-<li>
-<a href="#projects">Projetos</a>
-</li>
-
-<li>
-<a href="#contact">Contato</a>
-</li>
-
-</ul>
-
-</nav>
-
-</header>
-
-<!-- HOME -->
-
 <section class="home" id="home">
 
 <h1>
@@ -228,41 +103,32 @@ Olá, eu sou <span>Pedro Roque</span>
 </h1>
 
 <p>
-Desenvolvedor Full Stack focado em aplicações web modernas.
+Desenvolvedor Full Stack Junior com experiência em desenvolvimento Web, software e Machine Learning, utilizando Python, C++, PHP, JavaScript e tecnologias modernas.
 </p>
 
-<button class="btn"
-onclick="scrollToSection('projects')">
-
+<button class="btn" onclick="scrollToSection('projects')">
 Ver Projetos
-
 </button>
 
 </section>
-
-<!-- SOBRE -->
 
 <section class="about" id="about">
 
 <h2>Sobre mim</h2>
 
 <p>
-
-Sou desenvolvedor com experiência em:
-
-HTML  
-CSS  
-JavaScript  
-PHP  
-Python  
-
-Crio aplicações web completas e responsivas.
-
+Sou Desenvolvedor Full Stack Junior com experiência no desenvolvimento de aplicações web, software e projetos voltados à área de Machine Learning. Possuo conhecimentos em Python, C++, PHP e JavaScript, além de experiência no desenvolvimento e consumo de APIs e APIs REST, utilizando frameworks como Django, Laravel e Angular para criação de soluções completas e estruturadas.</br>
+</br>
+</p>
+<p>
+Tenho interesse em atuar tanto no desenvolvimento de sistemas quanto na criação de aplicações inteligentes, trabalhando desde a lógica de negócio até a interface com o usuário, sempre buscando aplicar boas práticas de desenvolvimento e organização de código.</br>
+</br>
+</p>
+<p>
+Estou em constante evolução profissional, com foco no aprimoramento das minhas competências em engenharia de software e inteligência artificial, buscando contribuir com soluções eficientes, escaláveis e inovadoras em projetos reais.
 </p>
 
 </section>
-
-<!-- PROJETOS -->
 
 <section class="projects" id="projects">
 
@@ -270,71 +136,46 @@ Crio aplicações web completas e responsivas.
 
 <div class="projects-grid">
 
-<div class="project-card">
-
+<a href="https://github.com/PedroRoque5/TechSuplementos" class="project-card">
 <h3>E-commerce</h3>
+<p>Sistema com login, pedidos e histórico de compras.</p>
+</a>
 
-<p>
-Sistema com login, pedidos e histórico de compras.
-</p>
-
-</div>
-
-<div class="project-card">
-
+<a href="https://github.com/PedroRoque5/AlimentosS-A-PL" class="project-card">
 <h3>Solver Programação Linear</h3>
+<p>Ferramenta web com backend em Python.</p>
+</a>
 
-<p>
-Ferramenta web com backend em Python.
-</p>
-
-</div>
-
-<div class="project-card">
-
-<h3>Jogo 2D GameMaker</h3>
-
-<p>
-Projeto autoral com movimentação e lógica própria.
-</p>
-
-</div>
+<a href="https://github.com/PedroRoque5/TechSuplementos" class="project-card">
+<h3>Site financeiro(TCC)</h3>
+<p>Site para análise de mercado financeiro e gestão de carteira de investimento.</p>
+</a>
 
 </div>
 
 </section>
-
-<!-- CONTATO -->
 
 <section class="contact" id="contact">
 
 <h2>Contato</h2>
 
-<p>Email: seuemail@email.com</p>
+<p>Email: pedroeduardoroque01@email.com</p>
 
-<p>GitHub: github.com/PedroRoque5</p>
+<p>GitHub: https://github.com/PedroRoque5</p>
+
+<p>Linkedin: https://www.linkedin.com/in/pedro-serafim-56a47b274/</p>
+
+<p>Telefone: (14) 99695-0327</p>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-<p>
-© 2026 Pedro Roque
-</p>
+<p>© 2026 Pedro Roque</p>
 
 </footer>
 
 <script>
-
-function toggleMenu(){
-
-let menu = document.getElementById("menu");
-
-menu.classList.toggle("active");
-
-}
 
 function scrollToSection(sectionId){
 
