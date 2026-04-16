@@ -7,59 +7,78 @@
 
 <style>
 
-* {
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Segoe UI;
 }
 
-body {
+body{
 background:#0f172a;
 color:white;
 }
 
-section {
+section{
 padding:80px 20px;
-min-height:100vh;
-max-width:900px;
+max-width:1100px;
 margin:auto;
 }
 
-.home {
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:flex-start;
-}
-
-.home h1 {
-font-size:48px;
-}
-
-.home span {
+h2{
+font-size:32px;
+margin-bottom:25px;
 color:#38bdf8;
 }
 
-.btn {
-margin-top:20px;
-padding:12px 24px;
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h1{
+font-size:52px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:20px;
+opacity:.85;
+max-width:700px;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 28px;
 border:none;
 background:#38bdf8;
 color:white;
 cursor:pointer;
 border-radius:8px;
 transition:.3s;
+font-size:16px;
 }
 
-.btn:hover {
+.btn:hover{
 background:#0284c7;
+transform:translateY(-2px);
 }
 
-.projects-grid {
+.about p{
+margin-bottom:20px;
+line-height:1.7;
+}
+
+.projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 margin-top:40px;
 }
 
@@ -68,25 +87,41 @@ display:block;
 text-decoration:none;
 color:white;
 background:#020617;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 transition:.3s;
 }
 
-.project-card:hover {
-transform:translateY(-5px);
+.project-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(56,189,248,.35);
 }
 
-footer {
+.contact p{
+margin-bottom:10px;
+font-size:17px;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:#020617;
+margin-top:40px;
 }
 
 @media(max-width:768px){
 
-.home h1 {
-font-size:32px;
+.hero h1{
+font-size:36px;
+}
+
+.subtitle{
+font-size:18px;
 }
 
 }
@@ -96,19 +131,33 @@ font-size:32px;
 
 <body>
 
-<section class="home" id="home">
+<section class="hero" id="home">
 
 <h1>
 Olá, eu sou <span>Pedro Roque</span>
 </h1>
 
-<p>
+<p class="subtitle">
 Desenvolvedor Full Stack Junior com experiência em desenvolvimento Web, software e Machine Learning, utilizando Python, C++, PHP, JavaScript e tecnologias modernas.
 </p>
+
+<div style="display:flex; gap:15px; flex-wrap:wrap; margin-top:30px;">
 
 <button class="btn" onclick="scrollToSection('projects')">
 Ver Projetos
 </button>
+
+<a class="btn" target="_blank"
+href="https://github.com/PedroRoque5">
+GitHub
+</a>
+
+<a class="btn" target="_blank"
+href="https://www.linkedin.com/in/pedro-serafim-56a47b274/">
+LinkedIn
+</a>
+
+</div>
 
 </section>
 
@@ -117,16 +166,61 @@ Ver Projetos
 <h2>Sobre mim</h2>
 
 <p>
-Sou Desenvolvedor Full Stack Junior com experiência no desenvolvimento de aplicações web, software e projetos voltados à área de Machine Learning. Possuo conhecimentos em Python, C++, PHP e JavaScript, além de experiência no desenvolvimento e consumo de APIs e APIs REST, utilizando frameworks como Django, Laravel e Angular para criação de soluções completas e estruturadas.</br>
-</br>
+Sou Desenvolvedor Full Stack Junior com experiência no desenvolvimento de aplicações web, software e projetos voltados à área de Machine Learning. Possuo conhecimentos em Python, C++, PHP e JavaScript, além de experiência no desenvolvimento e consumo de APIs e APIs REST, utilizando frameworks como Django, Laravel e Angular para criação de soluções completas e estruturadas.
 </p>
+
 <p>
-Tenho interesse em atuar tanto no desenvolvimento de sistemas quanto na criação de aplicações inteligentes, trabalhando desde a lógica de negócio até a interface com o usuário, sempre buscando aplicar boas práticas de desenvolvimento e organização de código.</br>
-</br>
+Tenho interesse em atuar tanto no desenvolvimento de sistemas quanto na criação de aplicações inteligentes, trabalhando desde a lógica de negócio até a interface com o usuário, sempre buscando aplicar boas práticas de desenvolvimento e organização de código.
 </p>
+
 <p>
-Estou em constante evolução profissional, com foco no aprimoramento das minhas competências em engenharia de software e inteligência artificial, buscando contribuir com soluções eficientes, escaláveis e inovadoras em projetos reais.
+Estou em constante evolução profissional, com foco no aprimoramento das minhas competências em desenvolvimento web, engenharia de software e inteligência artificial, buscando contribuir com soluções eficientes, escaláveis e inovadoras em projetos reais.
 </p>
+
+</section>
+
+<section class="skills" id="skills">
+
+<h2>Skills</h2>
+
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">Python</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">C++</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">PHP</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">JavaScript</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">HTML</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">CSS</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">Laravel</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">Django</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">Angular</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">APIs REST</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">Machine Learning</span>
+<span style="background:#020617; padding:10px 18px; border-radius:8px;">MySQL</span>
+
+</div>
+
+</section>
+
+<section class="certificates" id="certificates">
+
+<h2>Certificados</h2>
+
+<p style="opacity:.8; margin-bottom:20px;">Clique em um certificado para visualizar.</p>
+
+<div class="projects-grid">
+
+<a href="https://github.com/PedroRoque5/Certificados/blob/main/Banco%20de%20Dados.pdf" target="_blank" class="project-card">
+<h3>Certificado MySQL</h3>
+<p>Certificado de MySQL da instituição Curso em Vídeo (40 horas).</p>
+</a>
+
+<a href="https://github.com/PedroRoque5/Certificados/blob/main/English_for_IT_1_certificate_pedroeduardoroque01-gmail-com_85001c54-84ce-4c8c-8f04-9324ca88171f.pdf" target="_blank" class="project-card">
+<h3>Certificado Inglês 1</h3>
+<p>Certificado de Inglês 1 da instituição Cisco Network Academy.</p>
+</a>
+
+</div>
 
 </section>
 
@@ -136,18 +230,18 @@ Estou em constante evolução profissional, com foco no aprimoramento das minhas
 
 <div class="projects-grid">
 
-<a href="https://github.com/PedroRoque5/TechSuplementos" class="project-card">
+<a href="https://github.com/PedroRoque5/TechSuplementos" target="_blank" class="project-card">
 <h3>E-commerce</h3>
 <p>Sistema com login, pedidos e histórico de compras.</p>
 </a>
 
-<a href="https://github.com/PedroRoque5/AlimentosS-A-PL" class="project-card">
+<a href="https://github.com/PedroRoque5/AlimentosS-A-PL" target="_blank" class="project-card">
 <h3>Solver Programação Linear</h3>
-<p>Ferramenta web com backend em Python para calculo de melhor solução.</p>
+<p>Ferramenta web com backend em Python para cálculo de melhor solução.</p>
 </a>
 
-<a href="https://github.com/PedroRoque5/TechSuplementos" class="project-card">
-<h3>Site financeiro(TCC)</h3>
+<a href="https://github.com/PedroRoque5/TechSuplementos" target="_blank" class="project-card">
+<h3>Site financeiro (TCC)</h3>
 <p>Site para análise de mercado financeiro e gestão de carteira de investimento.</p>
 </a>
 
@@ -160,10 +254,6 @@ Estou em constante evolução profissional, com foco no aprimoramento das minhas
 <h2>Contato</h2>
 
 <p>Email: pedroeduardoroque01@email.com</p>
-
-<p>GitHub: https://github.com/PedroRoque5</p>
-
-<p>Linkedin: https://www.linkedin.com/in/pedro-serafim-56a47b274/</p>
 
 <p>Telefone: (14) 99695-0327</p>
 
